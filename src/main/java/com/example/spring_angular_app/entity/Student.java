@@ -1,6 +1,7 @@
 package com.example.spring_angular_app.entity;
 
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -17,6 +18,7 @@ public class Student {
     private String id;
     private String firstName;
     private String lastName;
+    @Column(unique = true)
     private String code;
     private String programId;
     private String photoUrl;
