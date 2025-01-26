@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor @NoArgsConstructor @Builder
-@Getter @Setter @ToString
+@Getter @Setter @ToString(callSuper = true)
 @Entity
 public class Student {
     @Id
@@ -23,6 +23,7 @@ public class Student {
     private String programId;
     private String photoUrl;
     @OneToMany
+    @ToString.Exclude
     private List<Payment> payments = new ArrayList<>();
 
 
